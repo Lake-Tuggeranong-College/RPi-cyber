@@ -2,7 +2,7 @@ import socket
 
 def send_command_to_server(command):
     host = "localhost"  # Change this to the server's hostname or IP address
-    port = 5000  # Use the same port number as the server
+    port = 1313  # Use the same port number as the server
 
     client_socket = socket.socket()
     client_socket.connect((host, port))  # Connect to the server

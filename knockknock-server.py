@@ -2,7 +2,7 @@ import socket
 
 def server_program():
     host = "127.0.0.1"
-    port = 5000
+    port = 1313
 
     server_socket = socket.socket()
     server_socket.bind((host, port))
@@ -20,8 +20,11 @@ def server_program():
         if message.lower().strip() == "quit":
             break  # Terminate the server if the client sends "quit"
 
-        # Process the command and generate a response
-        response = f"Your command was: {message.upper()}"
+        if message.lower().strip() == "code":
+            # Correct Code
+            response = f"Code for next step is: 1234"
+        else:
+            response = f"Your command was: {message.upper()}"
 
         client_socket.send(response.encode())
         client_socket.close()
