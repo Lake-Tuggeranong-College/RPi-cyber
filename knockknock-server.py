@@ -1,7 +1,7 @@
 import socket
 
 def server_program():
-    host = "127.0.0.1"
+    host = "192.168.1.14"
     port = 1313
 
     server_socket = socket.socket()
@@ -14,7 +14,10 @@ def server_program():
         client_socket, addr = server_socket.accept()
         print(f"Connection from {addr}")
 
-        message = client_socket.recv(1024).decode()
+        try:
+                message = client_socket.recv(1024).decode()
+        except:
+                continue
         print(f"Received message: {message}")
 
         if message.lower().strip() == "quit":
