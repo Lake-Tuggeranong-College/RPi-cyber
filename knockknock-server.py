@@ -18,16 +18,16 @@ def server_program():
                 message = client_socket.recv(1024).decode()
         except:
                 continue
-        print(f"Received message: {message}")
+        print(f"Received name: {message}")
 
         if message.lower().strip() == "quit":
             break  # Terminate the server if the client sends "quit"
 
-        if message.lower().strip() == "code":
+        if message.lower().strip() == "Ahsoka":
             # Correct Code
             response = f"Code for next step is: 1234"
         else:
-            response = f"Your command was: {message.upper()}"
+            response = f"Your name was: {message.upper()}. I was expecting Lady Tano. Try again."
 
         client_socket.send(response.encode())
         client_socket.close()
