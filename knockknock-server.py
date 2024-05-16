@@ -1,7 +1,7 @@
 import socket
 
 def server_program():
-    host = "192.168.1.14"
+    host = "192.168.1.43"
     port = 1313
 
     server_socket = socket.socket()
