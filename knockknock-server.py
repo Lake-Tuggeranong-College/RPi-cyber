@@ -25,7 +25,7 @@ def server_program():
 
         if message.lower().strip() == "Ahsoka":
             # Correct Code
-            response = f"Code for next step is: 1234"
+            response = f"Some things are not what they seem./n{message}, assume nothing. A K2 droid has infiltrated the base, pretending to a rebel terminal. Find it. The empire installed a backdoor on their K2 droids HNFGONLNHYQWWVSSIBIF4VRRHBHVCXJ2HFIEQZ3TIBIF6IZFIBZDKNCZIBIF6JRRHBHWWZDAIBJHIOKJIA3U4PRFHYRVEN2A....."
         else:
             response = f"Your name was: {message.upper()}. I was expecting Lady Tano. Try again."
 
