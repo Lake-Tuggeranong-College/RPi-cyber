@@ -23,11 +23,11 @@ def server_program():
         if message.lower().strip() == "quit":
             break  # Terminate the server if the client sends "quit"
 
-        if message.lower().strip() == "Ahsoka":
+        if message.lower().strip() == "ahsoka":
             # Correct Code
-            response = f"Some things are not what they seem./n{message}, assume nothing. A K2 droid has infiltrated the base, pretending to a rebel terminal. Find it. The empire installed a backdoor on their K2 droids HNFGONLNHYQWWVSSIBIF4VRRHBHVCXJ2HFIEQZ3TIBIF6IZFIBZDKNCZIBIF6JRRHBHWWZDAIBJHIOKJIA3U4PRFHYRVEN2A....."
+            response = f"\n\nSome things are not what they seem.\n{message}, assume nothing. \nA K2 droid has infiltrated the base, pretending to a rebel terminal. \nFind it. \nThe empire installed a backdoor on their K2 droids \nHNFGONLNHYQWWVSSIBIF4VRRHBHVCXJ2HFIEQZ3TIBIF6IZFIBZDKNCZIBIF6JRRHBHWWZDAIBJHIOKJIA3U4PRFHYRVEN2A.....\n\n"
         else:
-            response = f"Your name was: {message.upper()}. I was expecting Lady Tano. Try again."
+            response = f"Name provided: {message.upper()}. I was expecting Lady Tano. Try again."
 
         client_socket.send(response.encode())
         client_socket.close()
